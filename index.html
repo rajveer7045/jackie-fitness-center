@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="image1.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackie Fitness Center</title>
+<style>
+    :root{
+--bg:#0F172A;
+--card:#1E293B;
+--accent:#38BDF8;
+--accent-hover:#0EA5E9;
+--text:#F8FAFC;
+--muted:#CBD5E1;
+--border:#334155;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background: var(--bg);
+color:var(--text);
+line-height:1.6;
+}
+
+header{
+background:var(--card);
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+backdrop-filter:blur(10px);
+box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:var(--accent);
+}
+
+nav a{
+color:var(--text);
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--accent);
+}
+
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(15,23,42,.75),rgba(15,23,42,.75)),
+url(image.jpeg);
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:15px;
+}
+
+.hero span{
+color:var(--accent);
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:25px;
+color:var(--muted);
+}
+
+.btn{
+display:inline-block;
+background:var(--accent);
+padding:14px 30px;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:var(--accent-hover);
+background-color: rgb(233, 93, 42);
+transform:translateY(-3px);
+}
+
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:var(--accent);
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:var(--card);
+padding:30px;
+border-radius:12px;
+text-align:center;
+border:1px solid var(--border);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(56,189,248,.2);
+}
+
+.card h3{
+color:var(--accent);
+margin-bottom:15px;
+}
+
+.plans{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.plan{
+background:var(--card);
+padding:35px;
+text-align:center;
+border-radius:12px;
+border:1px solid var(--border);
+transition:.3s;
+}
+
+.plan:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(56,189,248,.2);
+}
+
+.price{
+font-size:40px;
+color:var(--accent);
+margin:20px 0;
+}
+
+.light{
+color:var(--muted);
+}
+
+.contact{
+text-align:center;
+}
+
+footer{
+background:var(--card);
+padding:25px;
+text-align:center;
+margin-top:50px;
+border-top:1px solid var(--border);
+}
+
+#typing{
+color:var(--accent);
+border-right:3px solid white;
+padding-right:5px;
+animation:blink .7s infinite;
+}
+
+#cc:hover{
+color:var(--accent);
+}
+.logo{
+color: rgb(233, 93, 42);
+}
+
+.jp{
+text-align:left;
+padding-left:80px;
+}
+
+#lk{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+#lk:hover{
+color:var(--accent);
+}
+
+@keyframes blink{
+50%{
+border-color:transparent;
+}
+}
+
+@media(max-width:768px){
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+nav{
+    display:none;
+}
+
+.jp{
+    padding-left:20px;
+}
+
+section{
+    padding:60px 5%;
+}
+
+.title{
+    font-size:32px;
+}
+}
+.card{
+opacity:1;
+transition:.4s ease;
+}
+
+.plan{
+transition:.4s ease;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">JFC</div>
+<nav>
+<a href="#about" id="cc">About</a>
+<a href="#services" id="cc">Services</a>
+<a href="#plans" id="cc">Plans</a>
+<a href="#contact" id="cc">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+
+ 
+<div>
+
+
+<h1 data-aos="fade-up">
+    JACKIE <span id="typing">FITNESS CENTER</span>
+</h1>
+
+<p data-aos="fade-up" data-aos-delay="200">
+    Transform Your Body. Transform Your Life.
+</p>
+
+<a href="#contact" class="btn" data-aos="zoom-in" data-aos-delay="400">
+    Join Now
+</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="title">About Us</h2>
+
+<div class="about">
+<img
+src="trainer.jpeg"
+data-aos="fade-right">
+<div data-aos="fade-left">
+<h3 style="font-size:32px;margin-bottom:15px;">
+Welcome to Jaickie Fitness Center
+</h3>
+
+<p>
+At Jaickie Fitness Center, we help you achieve your fitness goals
+with expert trainers, modern equipment, and personalized workout
+programs.
+</p>
+
+<br>
+
+<p>
+Whether your goal is weight loss, muscle gain, strength training,
+or overall fitness, we have the perfect program for you.
+</p>
+</div>
+</div>
+</section>
+
+<section id="services">
+<h2 class="title">Our Services</h2>
+
+<div class="services">
+
+<div class="card" data-aos="fade-up">
+<h3>Zumba Dance</h3>
+<p>Zumba is a fun, high-energy dance workout that combines fitness exercises with exciting Latin-inspired music and movements</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h3>Yoga</h3>
+<p>Yoga is a calming fitness practice that improves flexibility, strength, balance, and overall well-being.</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h3>Weight Loss</h3>
+<p>Our weight loss program combines effective workouts and nutrition guidance to help you achieve your fitness goals.</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h3>Aerobics</h3>
+<p>Aerobics is an energetic cardio workout that improves endurance, burns calories, and boosts overall fitness.</p>
+</div>
+
+</div>
+</section>
+
+<section id="plans">
+<h2 class="title">Membership Plans</h2>
+
+<div class="plans">
+
+<div class="plan"  data-aos="zoom-in">
+<h3>month fees</h3>
+<div class="price"><p>₹1500</p> <p><del class="light">₹2500</del></p></div>
+<div class="jp">
+<p>* Zumba Dance</p>
+<p>* Yoga</p>
+<p>* Weight Loss</p>
+<p>* Aerobics</p>
+</div>
+</div>
+
+<div class="plan" data-aos="zoom-in">
+<h3>Quater fees</h3>
+<div class="price"><p>₹4000</p> <p><del class="light">₹5500</del></p></div>
+<div class="jp">
+<p>* Zumba Dance</p>
+<p>* Yoga</p>
+<p>* Weight Loss</p>
+<p>* Aerobics</p>
+<P>(With Diet Guidance)</P>
+</div>
+</div>
+
+<div class="plan"  data-aos="zoom-in">
+<h3>Yearly fees</h3>
+<div class="price"><p>₹17000</p> <p><del class="light">₹19000</del></p></div>
+<div class="jp">
+<p>* Zumba Dance</p>
+<p>* Yoga</p>
+<p>* Weight Loss</p>
+<p>* Aerobics</p>
+<P>*(With Diet Guidance)</P>
+<p>*(Spersonal attention)</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2 class="title">Contact Us</h2>
+
+<div class="contact"  data-aos="zoom-in">
+<h3>Jackie Fitness Center</h3>
+<br>
+<p>📍 patuck college campus near by nehru road vakola santacruz east mumbai 400055 </p>
+<p>📞 +91 7045259932</p>
+<p>📧jaidigital02@gmail.com</p>
+<p>▶️<a href="https://www.youtube.com/watch?v=ijp560rdFW8" id="lk">Watch Now</a></p>
+<br>
+<a href="https://wa.me/917045259932" class="btn" target="_blank">
+    WhatsApp Us
+</a>
+</div>
+</section>
+
+<footer>
+© 2026 Jackie Fitness Center. All Rights Reserved.
+</footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+const text = "FITNESS CENTER";
+const typingElement = document.getElementById("typing");
+
+let index = 0;
+let isDeleting = false;
+
+function typeEffect() {
+
+    if (!isDeleting) {
+        typingElement.textContent = text.substring(0, index + 1);
+        index++;
+
+        if (index === text.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 1000); // wait before deleting
+            return;
+        }
+    } else {
+        typingElement.textContent = text.substring(0, index - 1);
+        index--;
+
+        if (index === 0) {
+            isDeleting = false;
+        }
+    }
+
+    setTimeout(typeEffect, isDeleting ? 80 : 150);
+}
+typeEffect();
+AOS.init({
+duration:1000,
+once:true,
+offset:100
+});
+document.querySelectorAll('a[href^="#"]').forEach (anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+    });
+</script>
+
+</body>
+</head>
+<body>
